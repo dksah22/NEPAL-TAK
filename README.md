@@ -1,6 +1,6 @@
-<p align="center">
-  <img src="https://raw.githubusercontent.com/USERNAME/REPOSITORY/main/nepaltak-logo.png" alt="Nepal Tak Logo" width="300"/>
+<p align="top">
+  <img src="https://raw.githubusercontent.com/USERNAME/REPOSITORY/main/nepaltak-logo.png" alt="Nepal Tak Logo" width="800"/>
 </p>
 
-<h1 align="center">Nepal Tak</h1>
-<p align="center">Your trusted source for Nepal’s latest updates.</p>
+<h1 align="top">Nepal Tak</h1>
+<p align="top">Your trusted source for Nepal’s latest updates.</p>
