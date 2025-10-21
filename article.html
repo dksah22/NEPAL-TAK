@@ -1,26 +1,82 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Article - Nepal Tak</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Nepal Tak - Latest News from Nepal and the World</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="header">
-    <img src="assets/nepaltak-logo.png" alt="Nepal Tak Logo" class="logo" />
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="#">Politics</a>
-      <a href="#">Business</a>
-      <a href="#">Sports</a>
-      <a href="#">Entertainment</a>
-    </nav>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo">
+        <img src="assets/nepaltak-logo.png" alt="Nepal Tak Logo" />
+        <h1>Nepal Tak</h1>
+        <p class="tagline">Latest News from Nepal and the World</p>
+      </div>
+      <nav class="main-nav">
+        <a href="#">Home</a>
+        <a href="#">Politics</a>
+        <a href="#">Business</a>
+        <a href="#">Sports</a>
+        <a href="#">Entertainment</a>
+        <a href="#">Contact</a>
+      </nav>
+    </div>
   </header>
 
   <main class="container">
-    <article class="article">
-      <h1>Full News Article Title</h1>
-      <p>By Reporter • 21 Oct 2025 • Kathmandu</p>
-      <img src="assets/article.jpg" alt="Article photo" />
-      <p>This is the full news content. You can write long paragraphs here describing the news in detail.</p>
+    <section class="hero">
+      <article class="hero-article">
+        <a href="article.html">
+          <img src="assets/hero.jpg" alt="Top story">
+          <h1>Top story headline goes here — example news title</h1>
+        </a>
+        <p class="meta">By Admin · 21 Oct 2025 · Kathmandu</p>
+      </article>
+      <aside class="top-list">
+        <h3>Trending</h3>
+        <ul>
+          <li><a href="article.html">Why this matters: short trend headline</a></li>
+          <li><a href="article.html">Another trending story</a></li>
+          <li><a href="article.html">Local update: quick headline</a></li>
+        </ul>
+      </aside>
+    </section>
+
+    <section class="news-grid">
+      <article class="card">
+        <a href="article.html"><img src="assets/thumb1.jpg" alt=""></a>
+        <h2><a href="article.html">News headline 1</a></h2>
+        <p class="meta">By Reporter · 20 Oct 2025</p>
+        <p>Short summary of the article for readers to decide...</p>
+      </article>
+
+      <article class="card">
+        <a href="article.html"><img src="assets/thumb2.jpg" alt=""></a>
+        <h2><a href="article.html">News headline 2</a></h2>
+        <p class="meta">By Reporter · 19 Oct 2025</p>
+        <p>Short summary of the article for readers to decide...</p>
+      </article>
+
+      <article class="card">
+        <a href="article.html"><img src="assets/thumb3.jpg" alt=""></a>
+        <h2><a href="article.html">News headline 3</a></h2>
+        <p class="meta">By Reporter · 18 Oct 2025</p>
+        <p>Short summary of the article for readers to decide...</p>
+      </article>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; <span id="year"></span> Nepal Tak. All rights reserved.</p>
+        <p>Contact: contact@nepaltak.com</p>
+      </div>
+    </footer>
+  </main>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
