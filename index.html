@@ -1,82 +1,158 @@
 <!doctype html>
-<html lang="en">
+<html lang="ne">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Nepal Tak - Latest News from Nepal and the World</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>NepalTak — ताजा समाचार</title>
+  <meta name="description" content="NepalTak — ताजा समाचार नेपाल र संसारबाट" />
+  <link rel="manifest" href="/manifest.json" />
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- Basic SEO / Social preview -->
+  <meta property="og:title" content="NepalTak — ताजा समाचार" />
+  <meta property="og:description" content="ताजा समाचार र विश्लेषण" />
+  <meta property="og:image" content="/preview.png" />
+
+  <style>
+    :root{--bg:#fff;--text:#0b1220;--muted:#6b7280;--card:#f8fafc;--accent:#e11d48}
+    [data-theme="dark"]{--bg:#071023;--text:#e6eef8;--muted:#9aa6b2;--card:#0b1220;--accent:#fb7185}
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial;background:var(--bg);color:var(--text)}
+    a{color:inherit}
+    .wrap{max-width:1100px;margin:28px auto;padding:0 16px}
+    header{display:flex;align-items:center;justify-content:space-between}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#fb923c);display:flex;align-items:center;justify-content:center;color:white;font-weight:700}
+    .search{display:flex;gap:8px;align-items:center;background:var(--card);padding:8px;border-radius:10px}
+    .search input{border:0;outline:none;background:transparent;padding:6px;width:260px}
+    nav{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0}
+    .cat{padding:8px 12px;border-radius:999px;background:var(--card);font-size:14px;cursor:pointer}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    @media(max-width:980px){.grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:640px){.grid{grid-template-columns:1fr}.search input{width:140px}}
+    .card{background:var(--card);border-radius:12px;overflow:hidden;box-shadow:0 8px 32px rgba(2,6,23,0.06)}
+    .card img{width:100%;height:180px;object-fit:cover}
+    .card-body{padding:12px}
+    .kicker{color:var(--accent);font-weight:700;font-size:12px}
+    .meta{font-size:13px;color:var(--muted)}
+    .top-row{display:flex;gap:12px;align-items:center}
+    footer{margin:40px 0;color:var(--muted);text-align:center}
+    .pill{background:var(--card);padding:6px 10px;border-radius:999px}
+    .hidden{display:none}
+  </style>
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <div class="logo">
-        <img src="assets/nepaltak-logo.png" alt="Nepal Tak Logo" />
-        <h1>Nepal Tak</h1>
-        <p class="tagline">Latest News from Nepal and the World</p>
+  <div class="wrap" id="app">
+    <header>
+      <div class="brand">
+        <div class="logo">NT</div>
+        <div>
+          <div style="font-weight:700">NepalTak</div>
+          <div style="font-size:13px;color:var(--muted)">Latest News from Nepal & the World</div>
+        </div>
       </div>
-      <nav class="main-nav">
-        <a href="#">Home</a>
-        <a href="#">Politics</a>
-        <a href="#">Business</a>
-        <a href="#">Sports</a>
-        <a href="#">Entertainment</a>
-        <a href="#">Contact</a>
-      </nav>
-    </div>
-  </header>
 
-  <main class="container">
-    <section class="hero">
-      <article class="hero-article">
-        <a href="article.html">
-          <img src="assets/hero.jpg" alt="Top story">
-          <h1>Top story headline goes here — example news title</h1>
-        </a>
-        <p class="meta">By Admin · 21 Oct 2025 · Kathmandu</p>
-      </article>
-      <aside class="top-list">
-        <h3>Trending</h3>
-        <ul>
-          <li><a href="article.html">Why this matters: short trend headline</a></li>
-          <li><a href="article.html">Another trending story</a></li>
-          <li><a href="article.html">Local update: quick headline</a></li>
-        </ul>
-      </aside>
-    </section>
-
-    <section class="news-grid">
-      <article class="card">
-        <a href="article.html"><img src="assets/thumb1.jpg" alt=""></a>
-        <h2><a href="article.html">News headline 1</a></h2>
-        <p class="meta">By Reporter · 20 Oct 2025</p>
-        <p>Short summary of the article for readers to decide...</p>
-      </article>
-
-      <article class="card">
-        <a href="article.html"><img src="assets/thumb2.jpg" alt=""></a>
-        <h2><a href="article.html">News headline 2</a></h2>
-        <p class="meta">By Reporter · 19 Oct 2025</p>
-        <p>Short summary of the article for readers to decide...</p>
-      </article>
-
-      <article class="card">
-        <a href="article.html"><img src="assets/thumb3.jpg" alt=""></a>
-        <h2><a href="article.html">News headline 3</a></h2>
-        <p class="meta">By Reporter · 18 Oct 2025</p>
-        <p>Short summary of the article for readers to decide...</p>
-      </article>
-    </section>
-
-    <footer class="footer">
-      <div class="container">
-        <p>&copy; <span id="year"></span> Dipendra Kumar Sah. All rights reserved.</p>
-        <p>Contact: nepaltak.media@gmail.com</p>
+      <div class="top-row">
+        <div class="search" role="search">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M21 21l-4.35-4.35" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <input id="search" placeholder="Search headlines..." aria-label="Search news" />
+        </div>
+        <div class="pill" id="time">--</div>
+        <div class="pill" id="themeToggle" style="cursor:pointer">🌙</div>
       </div>
+    </header>
+
+    <nav id="categories" aria-label="Categories"></nav>
+
+    <main>
+      <section id="feed">
+        <div class="grid" id="grid"></div>
+        <div style="text-align:center;margin-top:18px">
+          <button id="loadMore" style="padding:10px 16px;border-radius:10px;background:var(--accent);color:white;border:0;cursor:pointer">Load more</button>
+        </div>
+      </section>
+
+      <article id="articleView" class="hidden" style="max-width:900px;margin:22px auto">
+        <div class="meta" id="articleMeta"></div>
+        <h1 id="articleTitle"></h1>
+        <p id="articleLead" style="color:var(--muted)"></p>
+        <img id="articleImage" style="width:100%;border-radius:10px;margin-top:12px;max-height:420px;object-fit:cover" />
+        <div id="articleContent" style="margin-top:18px;line-height:1.8;color:var(--text)"></div>
+        <div style="margin-top:18px"><button id="back" style="padding:8px 12px;border-radius:8px;background:var(--card);border:0;cursor:pointer">← Back</button></div>
+      </article>
+    </main>
+
+    <footer>
+      NepalTak © <span id="yr"></span> — Built for GitHub Pages
     </footer>
-  </main>
+  </div>
 
-<script>
-  document.getElementById('year').textContent = new Date().getFullYear();
-</script>
+  <script>
+    // ======= Sample data (replace/fetch later) =======
+    const ARTICLES = [
+      {id:'a1',title:'काठमाडौंमा नयाँ शहर विकास योजना सार्वजनिक',lead:'नगरपालिकाले नयाँ मास्टरप्लान सार्वजनिक गर्‍यो।',content:'<p>यो मास्टरप्लानले...</p>',category:'Politics',image:'https://picsum.photos/seed/politics1/1200/700',author:'समाचारदाता',date:'2025-10-20'},
+      {id:'a2',title:'टी-२० तयारीमा नेपाल',lead:'नयाँ तालिम तालिका लागू गरियो।',content:'<p>टिमको फोकस...</p>',category:'Sports',image:'https://picsum.photos/seed/sports1/1200/700',author:'स्पोर्ट्स डेस्क',date:'2025-10-18'},
+      {id:'a3',title:'स्थानीय जलविद्युत् लगानी',lead:'साना लगानीकर्ताद्वारा...',content:'<p>परियोजना २० मेगावाट लक्ष्यमा...</p>',category:'Business',image:'https://picsum.photos/seed/business1/1200/700',author:'बिजनेस रिपोर्ट',date:'2025-10-15'}
+    ];
+
+    const state = {articles:ARTICLES.slice(),visible:6,query:'',category:null};
+    const el=id=>document.getElementById(id);
+
+    function init(){
+      el('yr').textContent=new Date().getFullYear();
+      el('time').textContent=new Date().toLocaleString();
+      renderCategories(); renderGrid(); setupSearch(); setupRouting(); setupTheme(); maybeRegisterSW();
+    }
+
+    function renderCategories(){
+      const cats=[...new Set(state.articles.map(a=>a.category))];
+      const ctn=el('categories'); ctn.innerHTML='';
+      const all=document.createElement('button'); all.className='cat'; all.textContent='All'; all.onclick=()=>{state.category=null;renderGrid()}; ctn.appendChild(all);
+      cats.forEach(c=>{const b=document.createElement('button');b.className='cat';b.textContent=c;b.onclick=()=>{state.category=c;renderGrid()};ctn.appendChild(b)});
+    }
+
+    function renderGrid(){
+      const grid=el('grid'); grid.innerHTML='';
+      const q=(state.query||'').toLowerCase();
+      const filtered=state.articles.filter(a=>{
+        if(state.category && a.category!==state.category) return false;
+        if(q && !(a.title.toLowerCase().includes(q) || a.lead.toLowerCase().includes(q))) return false;
+        return true;
+      });
+      const slice=filtered.slice(0,state.visible);
+      if(slice.length===0){grid.innerHTML='<div style="grid-column:1/-1;padding:18px;background:var(--card);border-radius:10px;text-align:center;color:var(--muted)">कुनै समाचार भेटिएन</div>';return}
+      slice.forEach(a=>grid.appendChild(card(a)));
+    }
+
+    function card(a){
+      const wr=document.createElement('article'); wr.className='card';
+      wr.innerHTML=`<img loading="lazy" src="${a.image}" alt="${escape(a.title)}"/><div class="card-body"><div class="kicker">${a.category}</div><h3><a href="#/article/${a.id}" data-id="${a.id}" class="link">${escape(a.title)}</a></h3><p>${escape(a.lead)}</p><div class="meta">${a.author} · ${a.date}</div></div>`;
+      wr.querySelector('.link').addEventListener('click',e=>{e.preventDefault();navigate(a.id)});
+      return wr;
+    }
+
+    function escape(s){return (s||'').replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;')}
+
+    function setupSearch(){el('search').addEventListener('input',e=>{state.query=e.target.value;state.visible=12;renderGrid()});el('loadMore').addEventListener('click',()=>{state.visible+=6;renderGrid()});}
+
+    // Routing
+    function setupRouting(){window.addEventListener('hashchange',route);route();el('back').addEventListener('click',()=>{location.hash='#/';});}
+    function route(){const h=location.hash||'#/'; if(h.startsWith('#/article/')){const id=h.split('/')[2];openArticle(id)}else{showFeed()}}
+    function navigate(id){location.hash=`#/article/${id}`}
+    function openArticle(id){const a=state.articles.find(x=>x.id===id);if(!a){showFeed();return}el('feed').classList.add('hidden');el('articleView').classList.remove('hidden');el('articleTitle').textContent=a.title;el('articleLead').textContent=a.lead;el('articleMeta').textContent=`${a.author} · ${a.date} · ${a.category}`;el('articleImage').src=a.image;el('articleContent').innerHTML=a.content;document.title=`${a.title} — NepalTak`}
+    function showFeed(){el('feed').classList.remove('hidden');el('articleView').classList.add('hidden');document.title='NepalTak — Latest News'}
+
+    // Theme
+    function setupTheme(){const saved=localStorage.getItem('theme');if(saved)document.documentElement.setAttribute('data-theme',saved);el('themeToggle').addEventListener('click',()=>{const cur=document.documentElement.getAttribute('data-theme');const next=cur==='dark'?'':'dark';if(next)document.documentElement.setAttribute('data-theme','dark');else document.documentElement.removeAttribute('data-theme');localStorage.setItem('theme',next||'light')});}
+
+    // Service worker registration
+    function maybeRegisterSW(){if('serviceWorker' in navigator){navigator.serviceWorker.register('/sw.js').then(()=>console.log('sw registered')).catch(()=>{/*ignore*/})}}
+
+    init();
+
+    // Infinite scroll: auto-load more
+    window.addEventListener('scroll',()=>{if((window.innerHeight+window.scrollY)>=document.body.offsetHeight-300){if(state.visible<state.articles.length){state.visible+=3;renderGrid()}}});
+  </script>
+
 </body>
 </html>
