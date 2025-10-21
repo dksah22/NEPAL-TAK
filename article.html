@@ -69,8 +69,10 @@
 
     <footer class="footer">
       <div class="container">
-        <p>&copy; <span id="year"></span> Nepal Tak. All rights reserved.</p>
-        <p>Contact: contact@nepaltak.com</p>
+        <p>&copy; <span id="year"></span> Dipendra Kumar Sah. All rights reserved.</p>
+        <p>Contact: nepaltak.media@gmail.com</p>
+        <p><contact:9843702661</p>
+        
       </div>
     </footer>
   </main>
@@ -78,5 +80,94 @@
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
 </script>
+</body>
+</html>
+!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<title>हिंदी कैलेंडर</title>
+<style>
+  body {
+    font-family: "Noto Sans Devanagari", sans-serif;
+    text-align: center;
+  }
+  table {
+    width: 50%;
+    margin: auto;
+    border-collapse: collapse;
+  }
+  th, td {
+    border: 1px solid #333;
+    padding: 10px;
+  }
+  th {
+    background-color: #f2f2f2;
+  }
+</style>
+</head>
+<body>
+
+<h2>कैलेंडर</h2>
+<select id="month"></select>
+<select id="year"></select>
+<button onclick="generateCalendar()">जेनरेट करें</button>
+
+<div id="calendar"></div>
+
+<script>
+const months = ["जनवरी", "फ़रवरी", "मार्च", "अप्रैल", "मई", "जून", 
+                "जुलाई", "अगस्त", "सितंबर", "अक्टूबर", "नवंबर", "दिसंबर"];
+
+const monthSelect = document.getElementById('month');
+const yearSelect = document.getElementById('year');
+
+for (let i = 0; i < months.length; i++) {
+  let option = document.createElement('option');
+  option.value = i;
+  option.text = months[i];
+  monthSelect.appendChild(option);
+}
+
+for (let i = 1970; i <= 2030; i++) {
+  let option = document.createElement('option');
+  option.value = i;
+  option.text = i;
+  yearSelect.appendChild(option);
+}
+
+function generateCalendar() {
+  const month = parseInt(monthSelect.value);
+  const year = parseInt(yearSelect.value);
+  
+  let firstDay = new Date(year, month, 1).getDay();
+  let daysInMonth = new Date(year, month + 1, 0).getDate();
+  
+  let table = '<table><tr>';
+  const weekdays = ["रवि", "सोम", "मंगल", "बुध", "गुरु", "शुक्र", "शनि"];
+  weekdays.forEach(day => table += `<th>${day}</th>`);
+  table += '</tr><tr>';
+  
+  for (let i = 0; i < firstDay; i++) {
+    table += '<td></td>';
+  }
+  
+  for (let day = 1; day <= daysInMonth; day++) {
+    table += `<td>${day}</td>`;
+    if ((day + firstDay) % 7 === 0) {
+      table += '</tr><tr>';
+    }
+  }
+  
+  table += '</tr></table>';
+  document.getElementById('calendar').innerHTML = table;
+}
+
+// Initialize with current month and year
+monthSelect.value = new Date().getMonth();
+yearSelect.value = new Date().getFullYear();
+generateCalendar();
+</script>
+
 </body>
 </html>
