@@ -189,3 +189,63 @@
 </body>
 </html>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nepal Tak - News Portal</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <img src="assets/nepaltak-logo.png" alt="Nepal Tak Logo" class="logo" />
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Politics</a>
+      <a href="#">Business</a>
+      <a href="#">Sports</a>
+      <a href="#">Entertainment</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="headline">
+      <img src="assets/hero.jpg" alt="Main news" />
+      <div>
+        <h1>Top headline: Nepal’s latest breaking news goes here</h1>
+        <p>By Admin • 21 Oct 2025 • Kathmandu</p>
+      </div>
+    </section>
+
+    <section class="news-grid">
+      <article>
+        <img src="assets/thumb1.jpg" alt="">
+        <h2><a href="article.html">News Headline 1</a></h2>
+        <p>Short intro of the article goes here...</p>
+      </article>
+
+      <article>
+        <img src="assets/thumb2.jpg" alt="">
+        <h2><a href="article.html">News Headline 2</a></h2>
+        <p>Brief intro for this article...</p>
+      </article>
+
+      <article>
+        <img src="assets/thumb3.jpg" alt="">
+        <h2><a href="article.html">News Headline 3</a></h2>
+        <p>Short description about the news topic...</p>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Nepal Tak. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
